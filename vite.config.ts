@@ -1,5 +1,6 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
+import { nitro } from "nitro/vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -39,6 +40,21 @@ export default defineConfig(async () => {
   process.env.WRANGLER_WRITE_LOGS ??= "false";
   process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
+
+  // Netlify needs Nitro's adapter instead of the Cloudflare/Sites runtime.
+  // Keep the existing Cloudflare build as the default for local previews and
+  // production Sites deployments.
+  const isNetlifyBuild =
+    process.env.NETLIFY === "true" || process.env.NITRO_PRESET === "netlify";
+
+  if (isNetlifyBuild) {
+    return {
+      server: isCodexSeatbeltSandbox
+        ? { watch: { useFsEvents: false, usePolling: true } }
+        : undefined,
+      plugins: [vinext(), nitro()],
+    };
+  }
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
