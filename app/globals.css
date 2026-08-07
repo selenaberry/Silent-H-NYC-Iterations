@@ -1014,7 +1014,7 @@ h2 {
   place-items: center;
   padding: 92px 24px;
   overflow: hidden;
-  background: linear-gradient(135deg, #ef4564 0%, #e83d65 58%, #d72f59 100%);
+  background: #d24965;
   color: #050505;
   text-align: center;
 }
