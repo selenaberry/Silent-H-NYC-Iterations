@@ -339,6 +339,7 @@ h2 {
   font-size: clamp(20px, 1.85vw, 24px);
   line-height: 1.45;
   letter-spacing: 0.025em;
+  text-wrap: pretty;
 }
 
 .section-intro {

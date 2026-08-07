@@ -115,7 +115,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.hero h1\s*\{[^}]*letter-spacing:\s*0\.08em/s);
   assert.match(css, /\.hero-content > p\s*\{[^}]*width:\s*min\(1240px,\s*calc\(100vw - 24px\)\)[^}]*margin:\s*28px auto 28px[^}]*font-size:\s*20px[^}]*line-height:\s*1[^}]*letter-spacing:\s*0\.22em[^}]*white-space:\s*nowrap/s);
   assert.match(css, /\.intro-section\s*\{[^}]*background:\s*#000[^}]*text-align:\s*center/s);
-  assert.match(css, /\.intro-section p\s*\{[^}]*font-family:\s*"NeueBit"[^}]*font-size:\s*clamp\(20px,\s*1\.85vw,\s*24px\)[^}]*line-height:\s*1\.45/s);
+  assert.match(css, /\.intro-section p\s*\{[^}]*font-family:\s*"NeueBit"[^}]*font-size:\s*clamp\(20px,\s*1\.85vw,\s*24px\)[^}]*line-height:\s*1\.45[^}]*text-wrap:\s*pretty/s);
   assert.match(css, /\.hero\s*\{[^}]*min-height:\s*980px/s);
   assert.match(css, /\.menu-section\s*\{[^}]*padding:\s*120px 0 110px/s);
   assert.match(css, /\.main-nav\s*\{[^}]*width:\s*620px;[^}]*height:\s*74px/s);
