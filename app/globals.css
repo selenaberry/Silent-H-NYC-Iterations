@@ -824,8 +824,7 @@ h2 {
 
 .our-story-hero-image,
 .inspiration-showcase,
-.our-story-arched-image,
-.our-story-social > img {
+.our-story-arched-image {
   border: 1px solid transparent;
   border-image: var(--stained-glass-border) 1;
 }
@@ -1085,29 +1084,6 @@ h2 {
   border-color: #050505;
   background: rgba(5, 5, 5, 0.12);
   color: #050505;
-}
-
-.our-story-social {
-  min-height: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 40px 20px 62px;
-  text-align: center;
-}
-
-.our-story-social > img {
-  width: 456px;
-  margin-bottom: 28px;
-}
-
-.our-story-social h2 {
-  margin-bottom: 18px;
-}
-
-.our-story-social .social-links {
-  margin-top: 0;
 }
 
 @media (max-width: 900px) {
@@ -1509,14 +1485,6 @@ h2 {
     min-width: 0;
   }
 
-  .our-story-social {
-    min-height: 470px;
-    padding-bottom: 50px;
-  }
-
-  .our-story-social > img {
-    width: min(456px, 100%);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

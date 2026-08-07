@@ -59,7 +59,7 @@ test("server-renders the Silent H Our Story page", async () => {
   assert.match(html, /La inspiración/i);
   assert.match(html, /The heart of our kitchen/i);
   assert.match(html, /Every dish tells a story/i);
-  assert.match(html, /Let(?:&#x27;|')s get social/i);
+  assert.match(html, /Let(?:&#x27;|'|’|&#x2019;)s get social/i);
 });
 
 test("homepage source keeps its supplied media and core accessibility hooks", async () => {
@@ -95,7 +95,8 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(storyPage, /our-story-grandmother\.webp/);
   assert.match(storyPage, /our-story-table\.webp/);
   assert.match(storyPage, /our-story-taco\.webp/);
-  assert.match(storyPage, /our-story-social-arch\.webp/);
+  assert.match(storyPage, /social-door-figma\.webp/);
+  assert.match(storyPage, /className="social-section"/);
   assert.match(storyPage, /our-story-reservation/);
   assert.match(storyPage, /Experience the story for yourself\./);
   assert.match(storyPage, /Book Your Reservation/);
@@ -123,7 +124,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.our-story-arched-image\s*\{[^}]*border-radius:\s*0/s);
   assert.match(css, /\.our-story-row-reverse\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*463px[^}]*gap:\s*46px/s);
   assert.match(css, /\.our-story-table-image\s*\{[^}]*height:\s*617px/s);
-  assert.match(css, /\.our-story-hero-image,\s*\.inspiration-showcase,\s*\.our-story-arched-image,\s*\.our-story-social > img\s*\{[^}]*border:\s*1px solid transparent[^}]*border-image:\s*var\(--stained-glass-border\) 1/s);
+  assert.match(css, /\.our-story-hero-image,\s*\.inspiration-showcase,\s*\.our-story-arched-image\s*\{[^}]*border:\s*1px solid transparent[^}]*border-image:\s*var\(--stained-glass-border\) 1/s);
   assert.match(css, /--stained-glass-border:\s*linear-gradient\(\s*90deg,\s*#b37d73 0%,\s*#b37d73 100%\s*\)/s);
   assert.match(css, /\.our-story-philosophy::before\s*\{[^}]*background:\s*#000/s);
   assert.doesNotMatch(css, /rgba\(232,\s*61,\s*101|rgba\(143,\s*22,\s*67|rgba\(238,\s*75,\s*116|rgba\(104,\s*18,\s*51/);
@@ -142,7 +143,6 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
     access(new URL("public/media/our-story-grandmother.webp", templateRoot)),
     access(new URL("public/media/our-story-table.webp", templateRoot)),
     access(new URL("public/media/our-story-taco.webp", templateRoot)),
-    access(new URL("public/media/our-story-social-arch.webp", templateRoot)),
     access(new URL("public/og.png", templateRoot)),
   ]);
 });

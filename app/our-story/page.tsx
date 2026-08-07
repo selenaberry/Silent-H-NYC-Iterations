@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export const metadata: Metadata = {
   title: "Our Story | Silent H",
@@ -140,19 +140,28 @@ export default function OurStory() {
         </div>
       </section>
 
-      <section className="our-story-social" aria-labelledby="our-story-social-title">
-        <img src="/media/our-story-social-arch.webp" alt="" aria-hidden="true" loading="lazy" />
-        <h2 id="our-story-social-title">Let&apos;s get social</h2>
-        <div className="social-links">
-          <a href="https://www.tiktok.com/@silenth.to?lang=en" aria-label="Silent H on TikTok">
-            <FaTiktok aria-hidden="true" />
-          </a>
-          <a href="https://www.instagram.com/silenth.to/?hl=en" aria-label="Silent H on Instagram">
-            <FaInstagram aria-hidden="true" />
-          </a>
-          <a href="https://www.facebook.com/silenth.to/" aria-label="Silent H on Facebook">
-            <FaFacebookF aria-hidden="true" />
-          </a>
+      <section className="social-section" aria-labelledby="our-story-social-title">
+        <img
+          src="/media/social-door-figma.webp"
+          alt="Silent H’s carved stone entrance glowing by candlelight"
+          loading="lazy"
+        />
+        <div className="social-overlay">
+          <h2 id="our-story-social-title">Let’s get social</h2>
+          <div className="social-links">
+            <a href="https://www.tiktok.com/@silenth.to?lang=en" aria-label="Silent H on TikTok">
+              <FaTiktok aria-hidden="true" />
+            </a>
+            <a href="https://www.instagram.com/silenth.to/?hl=en" aria-label="Silent H on Instagram">
+              <FaInstagram aria-hidden="true" />
+            </a>
+            <a href="https://www.facebook.com/silenth.to/" aria-label="Silent H on Facebook">
+              <FaFacebookF aria-hidden="true" />
+            </a>
+            <a href="https://www.youtube.com/@silenth.toronto" aria-label="Silent H on YouTube">
+              <FaYoutube aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </section>
     </main>

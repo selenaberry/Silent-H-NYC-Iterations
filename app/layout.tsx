@@ -22,11 +22,12 @@ export async function generateMetadata(): Promise<Metadata> {
       "Modern Mexican cooking, craft cocktails, reservations and private events in Toronto's King West neighbourhood.",
     icons: {
       icon: [
-        { url: "/favicon.ico?v=3", type: "image/x-icon" },
-        { url: "/favicon.png?v=3", type: "image/png", sizes: "64x64" },
+        { url: "/media/silent-h-logo.svg?v=5", type: "image/svg+xml" },
+        { url: "/favicon.png?v=5", type: "image/png", sizes: "256x256" },
+        { url: "/favicon.ico?v=5", type: "image/x-icon" },
       ],
-      shortcut: "/favicon.ico?v=3",
-      apple: "/favicon.png?v=3",
+      shortcut: "/favicon.ico?v=5",
+      apple: "/favicon.png?v=5",
     },
     openGraph: {
       title: "Silent H | Mexican Flavours, Celebrated in NYC",
@@ -54,10 +55,10 @@ export default function RootLayout({
       <head>
         {/* Keep an explicit link in the document head for browsers that do not
             materialize Next metadata icons when using the Vite runtime. */}
-        <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" />
-        <link rel="icon" href="/favicon.png?v=4" type="image/png" sizes="64x64" />
-        <link rel="shortcut icon" href="/favicon.ico?v=4" />
-        <link rel="apple-touch-icon" href="/favicon.png?v=4" />
+        <link rel="icon" href="/media/silent-h-logo.svg?v=5" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png?v=5" type="image/png" sizes="256x256" />
+        <link rel="shortcut icon" href="/favicon.ico?v=5" />
+        <link rel="apple-touch-icon" href="/favicon.png?v=5" />
       </head>
       <body>
         <a className="skip-link" href="#main-content">
