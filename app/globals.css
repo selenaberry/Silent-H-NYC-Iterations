@@ -1088,6 +1088,18 @@ h2 {
   color: #050505;
 }
 
+.intro-section p,
+.section-intro p,
+.our-story-hero-content p,
+.our-story-philosophy p,
+.our-story-copy p,
+.our-story-reservation-inner > p:not(.our-story-reservation-kicker) {
+  font-family: "NeueBit", ui-monospace, monospace;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.025em;
+}
+
 @media (max-width: 900px) {
   body {
     font-size: 17px;
