@@ -121,7 +121,10 @@ export default function OurStory() {
       <section className="our-story-reservation" aria-labelledby="story-reservation-title">
         <div className="our-story-reservation-inner">
           <p className="our-story-reservation-kicker">Your table is waiting</p>
-          <h2 id="story-reservation-title">Experience the story for yourself.</h2>
+          <h2 id="story-reservation-title">
+            <span>Experience the story</span>
+            <span>for yourself.</span>
+          </h2>
           <p>
             Join us for bold Mexican flavours, handcrafted cocktails, and a night made to be
             remembered.

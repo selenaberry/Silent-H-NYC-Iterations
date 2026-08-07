@@ -98,7 +98,8 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(storyPage, /social-door-figma\.webp/);
   assert.match(storyPage, /className="social-section"/);
   assert.match(storyPage, /our-story-reservation/);
-  assert.match(storyPage, /Experience the story for yourself\./);
+  assert.match(storyPage, /<span>Experience the story<\/span>/);
+  assert.match(storyPage, /<span>for yourself\.<\/span>/);
   assert.match(storyPage, /Book Your Reservation/);
   assert.match(storyPage, /View the Menu/);
   assert.match(layout, /\/og\.png/);
@@ -129,6 +130,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.our-story-philosophy::before\s*\{[^}]*background:\s*#000/s);
   assert.doesNotMatch(css, /rgba\(232,\s*61,\s*101|rgba\(143,\s*22,\s*67|rgba\(238,\s*75,\s*116|rgba\(104,\s*18,\s*51/);
   assert.match(css, /\.our-story-reservation\s*\{[^}]*min-height:\s*470px[^}]*background:\s*#d24965/s);
+  assert.match(css, /\.our-story-reservation h2 span\s*\{[^}]*display:\s*block[^}]*white-space:\s*nowrap/s);
   assert.match(css, /\.our-story-reservation-actions\s*\{[^}]*display:\s*flex/s);
   assert.match(css, /\.story-poster\s*\{[^}]*top:\s*9\.5vw[^}]*left:\s*13\.05vw[^}]*width:\s*28\.52vw/s);
   assert.match(css, /\.story-section blockquote\s*\{[^}]*top:\s*29\.77vw[^}]*left:\s*50\.78vw[^}]*width:\s*36\.17vw/s);
