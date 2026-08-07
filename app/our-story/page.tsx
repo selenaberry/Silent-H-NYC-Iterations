@@ -123,7 +123,7 @@ export default function OurStory() {
           <p className="our-story-reservation-kicker">Your table is waiting</p>
           <h2 id="story-reservation-title">
             <span>Experience the story</span>
-            <span>for yourself.</span>
+            <span>of Silent H</span>
           </h2>
           <p>
             Join us for bold Mexican flavours, handcrafted cocktails, and a night made to be

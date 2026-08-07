@@ -99,7 +99,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(storyPage, /className="social-section"/);
   assert.match(storyPage, /our-story-reservation/);
   assert.match(storyPage, /<span>Experience the story<\/span>/);
-  assert.match(storyPage, /<span>for yourself\.<\/span>/);
+  assert.match(storyPage, /<span>of Silent H<\/span>/);
   assert.match(storyPage, /Book Your Reservation/);
   assert.match(storyPage, /View the Menu/);
   assert.match(layout, /\/og\.png/);
