@@ -792,11 +792,6 @@ h2 {
   isolation: isolate;
   overflow: hidden;
   background: #000;
-  --stained-glass-border: linear-gradient(
-    90deg,
-    #b37d73 0%,
-    #b37d73 100%
-  );
 }
 
 .our-story-page > section {
@@ -822,11 +817,12 @@ h2 {
   object-position: center 45%;
 }
 
-.our-story-hero-image,
-.inspiration-showcase,
-.our-story-arched-image {
-  border: 1px solid transparent;
-  border-image: var(--stained-glass-border) 1;
+.our-story-page .our-story-hero-image,
+.our-story-page .inspiration-showcase,
+.our-story-page .our-story-arched-image,
+.our-story-page .social-section > img {
+  border: 0;
+  border-image: none;
 }
 
 .our-story-hero-vignette {

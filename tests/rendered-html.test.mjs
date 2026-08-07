@@ -125,8 +125,8 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.our-story-arched-image\s*\{[^}]*border-radius:\s*0/s);
   assert.match(css, /\.our-story-row-reverse\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*463px[^}]*gap:\s*46px/s);
   assert.match(css, /\.our-story-table-image\s*\{[^}]*height:\s*617px/s);
-  assert.match(css, /\.our-story-hero-image,\s*\.inspiration-showcase,\s*\.our-story-arched-image\s*\{[^}]*border:\s*1px solid transparent[^}]*border-image:\s*var\(--stained-glass-border\) 1/s);
-  assert.match(css, /--stained-glass-border:\s*linear-gradient\(\s*90deg,\s*#b37d73 0%,\s*#b37d73 100%\s*\)/s);
+  assert.match(css, /\.our-story-page \.our-story-hero-image,\s*\.our-story-page \.inspiration-showcase,\s*\.our-story-page \.our-story-arched-image,\s*\.our-story-page \.social-section > img\s*\{[^}]*border:\s*0[^}]*border-image:\s*none/s);
+  assert.doesNotMatch(css, /--stained-glass-border/);
   assert.match(css, /\.our-story-philosophy::before\s*\{[^}]*background:\s*#000/s);
   assert.doesNotMatch(css, /rgba\(232,\s*61,\s*101|rgba\(143,\s*22,\s*67|rgba\(238,\s*75,\s*116|rgba\(104,\s*18,\s*51/);
   assert.match(css, /\.our-story-reservation\s*\{[^}]*min-height:\s*470px[^}]*background:\s*#d24965/s);
