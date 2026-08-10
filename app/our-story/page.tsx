@@ -145,7 +145,7 @@ export default function OurStory() {
 
       <section className="social-section" aria-labelledby="our-story-social-title">
         <img
-          src="/media/social-door-figma.webp"
+          src="/media/social-footer-neon.png"
           alt="Silent H’s carved stone entrance glowing by candlelight"
           loading="lazy"
         />

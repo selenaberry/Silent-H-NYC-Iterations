@@ -80,7 +80,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(page, /hero-full-mural\.webp/);
   assert.match(page, /hero-full-mural-2x\.webp/);
   assert.match(page, /story-poster-figma\.webp/);
-  assert.match(page, /social-door-figma\.webp/);
+  assert.match(page, /social-footer-neon\.png/);
   assert.match(page, /FaTiktok/);
   assert.match(page, /FaInstagram/);
   assert.match(page, /FaFacebookF/);
@@ -96,7 +96,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(storyPage, /our-story-grandmother\.webp/);
   assert.match(storyPage, /our-story-table\.webp/);
   assert.match(storyPage, /our-story-taco\.webp/);
-  assert.match(storyPage, /social-door-figma\.webp/);
+  assert.match(storyPage, /social-footer-neon\.png/);
   assert.match(storyPage, /className="social-section"/);
   assert.match(storyPage, /our-story-reservation/);
   assert.match(storyPage, /<span>Experience the story<\/span>/);
@@ -142,7 +142,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
     access(new URL("public/media/hero-full-mural-2x.webp", templateRoot)),
     access(new URL("public/media/private-dining-figma.webp", templateRoot)),
     access(new URL("public/media/story-poster-figma.webp", templateRoot)),
-    access(new URL("public/media/social-door-figma.webp", templateRoot)),
+    access(new URL("public/media/social-footer-neon.png", templateRoot)),
     access(new URL("public/media/our-story-chef.webp", templateRoot)),
     access(new URL("public/media/our-story-inspiration.webp", templateRoot)),
     access(new URL("public/media/our-story-grandmother.webp", templateRoot)),
