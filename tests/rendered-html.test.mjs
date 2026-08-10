@@ -78,6 +78,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(footer, /href="\/our-story"/);
   assert.match(page, /fetchPriority="high"/);
   assert.match(page, /hero-full-mural\.webp/);
+  assert.match(page, /hero-full-mural-2x\.webp/);
   assert.match(page, /story-poster-figma\.webp/);
   assert.match(page, /social-door-figma\.webp/);
   assert.match(page, /FaTiktok/);
@@ -132,12 +133,13 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.our-story-reservation\s*\{[^}]*min-height:\s*470px[^}]*background:\s*#d24965/s);
   assert.match(css, /\.our-story-reservation h2 span\s*\{[^}]*display:\s*block[^}]*white-space:\s*nowrap/s);
   assert.match(css, /\.our-story-reservation-actions\s*\{[^}]*display:\s*flex/s);
-  assert.match(css, /\.intro-section p,\s*\.section-intro p,\s*\.our-story-hero-content p,\s*\.our-story-philosophy p,\s*\.our-story-copy p,\s*\.our-story-reservation-inner > p:not\(\.our-story-reservation-kicker\)\s*\{[^}]*font-family:\s*"NeueBit"[^}]*font-weight:\s*400[^}]*line-height:\s*1\.45[^}]*letter-spacing:\s*0\.025em/s);
+  assert.match(css, /\.intro-section p,\s*\.section-intro p,\s*\.our-story-hero-content p,\s*\.our-story-philosophy p,\s*\.our-story-copy p,\s*\.our-story-reservation-inner > p:not\(\.our-story-reservation-kicker\)\s*\{[^}]*font-family:\s*"NeueBit"[^}]*font-size:\s*clamp\(20px,\s*1\.85vw,\s*24px\)[^}]*font-weight:\s*400[^}]*line-height:\s*1\.45[^}]*letter-spacing:\s*0\.025em/s);
   assert.match(css, /\.story-poster\s*\{[^}]*top:\s*9\.5vw[^}]*left:\s*13\.05vw[^}]*width:\s*28\.52vw/s);
   assert.match(css, /\.story-section blockquote\s*\{[^}]*top:\s*29\.77vw[^}]*left:\s*50\.78vw[^}]*width:\s*36\.17vw/s);
 
   await Promise.all([
     access(new URL("public/media/hero-full-mural.webp", templateRoot)),
+    access(new URL("public/media/hero-full-mural-2x.webp", templateRoot)),
     access(new URL("public/media/private-dining-figma.webp", templateRoot)),
     access(new URL("public/media/story-poster-figma.webp", templateRoot)),
     access(new URL("public/media/social-door-figma.webp", templateRoot)),

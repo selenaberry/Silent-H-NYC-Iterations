@@ -53,6 +53,8 @@ export default function Home() {
           <img
             className="hero-image"
             src="/media/hero-full-mural.webp"
+            srcSet="/media/hero-full-mural.webp 1280w, /media/hero-full-mural-2x.webp 2560w"
+            sizes="100vw"
             alt="A full stained-glass mural centred on a luminous golden sun"
             fetchPriority="high"
           />
