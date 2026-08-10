@@ -672,6 +672,14 @@ h2 {
   object-fit: contain;
 }
 
+#social > img {
+  width: min(760px, calc(100% - 48px));
+}
+
+.our-story-page .social-section > img {
+  width: min(760px, calc(100% - 48px));
+}
+
 .social-overlay {
   order: 1;
   position: relative;

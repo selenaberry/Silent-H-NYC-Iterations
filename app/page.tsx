@@ -52,7 +52,7 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <img
             className="hero-image"
-            src="/media/hero-stained-glass.jpg"
+            src="/media/hero-stained-glass-upscaled.jpg"
             sizes="100vw"
             alt="A full stained-glass mural centred on a luminous golden sun"
             fetchPriority="high"
