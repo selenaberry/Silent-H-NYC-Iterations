@@ -77,7 +77,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(header, /href="\/#menu"/);
   assert.match(footer, /href="\/our-story"/);
   assert.match(page, /fetchPriority="high"/);
-  assert.match(page, /hero-stained-glass\.jpg/);
+  assert.match(page, /hero-stained-glass-upscaled\.jpg/);
   assert.match(page, /story-poster-figma\.webp/);
   assert.match(page, /social-footer-neon\.png/);
   assert.match(page, /FaTiktok/);
@@ -126,6 +126,8 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.our-story-row-reverse\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*463px[^}]*gap:\s*46px/s);
   assert.match(css, /\.our-story-table-image\s*\{[^}]*height:\s*617px/s);
   assert.match(css, /\.our-story-page \.our-story-hero-image,\s*\.our-story-page \.inspiration-showcase,\s*\.our-story-page \.our-story-arched-image,\s*\.our-story-page \.social-section > img\s*\{[^}]*border:\s*0[^}]*border-image:\s*none/s);
+  assert.match(css, /#social > img\s*\{[^}]*width:\s*min\(760px,\s*calc\(100% - 48px\)\)/s);
+  assert.match(css, /\.our-story-page \.social-section > img\s*\{[^}]*width:\s*min\(760px,\s*calc\(100% - 48px\)\)/s);
   assert.doesNotMatch(css, /--stained-glass-border/);
   assert.match(css, /\.our-story-philosophy::before\s*\{[^}]*background:\s*#000/s);
   assert.doesNotMatch(css, /rgba\(232,\s*61,\s*101|rgba\(143,\s*22,\s*67|rgba\(238,\s*75,\s*116|rgba\(104,\s*18,\s*51/);
@@ -137,7 +139,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.story-section blockquote\s*\{[^}]*top:\s*29\.77vw[^}]*left:\s*50\.78vw[^}]*width:\s*36\.17vw/s);
 
   await Promise.all([
-    access(new URL("public/media/hero-stained-glass.jpg", templateRoot)),
+    access(new URL("public/media/hero-stained-glass-upscaled.jpg", templateRoot)),
     access(new URL("public/media/private-dining-figma.webp", templateRoot)),
     access(new URL("public/media/story-poster-figma.webp", templateRoot)),
     access(new URL("public/media/social-footer-neon.png", templateRoot)),
