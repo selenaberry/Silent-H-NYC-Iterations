@@ -200,7 +200,7 @@ export default function Home() {
         <section className="social-section" id="social" aria-labelledby="social-title">
           <img
             src="/media/social-footer-neon.png"
-            alt="Silent H’s carved stone entrance glowing by candlelight"
+            alt="A glowing neon sign reading You Are Exactly Where You Need To Be against a black background"
             loading="lazy"
           />
           <div className="social-overlay">
