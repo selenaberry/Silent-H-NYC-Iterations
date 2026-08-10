@@ -52,8 +52,7 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <img
             className="hero-image"
-            src="/media/hero-full-mural.webp"
-            srcSet="/media/hero-full-mural.webp 1280w, /media/hero-full-mural-2x.webp 2560w"
+            src="/media/hero-stained-glass.png"
             sizes="100vw"
             alt="A full stained-glass mural centred on a luminous golden sun"
             fetchPriority="high"
