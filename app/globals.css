@@ -1049,12 +1049,13 @@ h2 {
 }
 
 .our-story-reservation-inner > p:not(.our-story-reservation-kicker) {
-  max-width: 680px;
+  max-width: none;
   margin: 0 auto 38px;
   font-size: 19px;
   font-weight: 700;
   line-height: 1.45;
   letter-spacing: 0.075em;
+  white-space: nowrap;
 }
 
 .our-story-reservation-actions {
@@ -1477,7 +1478,9 @@ h2 {
   }
 
   .our-story-reservation-inner > p:not(.our-story-reservation-kicker) {
+    max-width: 680px;
     font-size: 17px;
+    white-space: normal;
   }
 
   .our-story-reservation-actions {
