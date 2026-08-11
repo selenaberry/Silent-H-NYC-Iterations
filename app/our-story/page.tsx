@@ -43,7 +43,7 @@ export default function OurStory() {
 
       <section className="inspiration-showcase" aria-labelledby="inspiration-title">
         <img
-          src="/media/our-story-inspiration.webp"
+          src="/media/our-story-inspiration-upscaled.jpg"
           alt="A sunlit family home on a residential street in Monterrey"
           loading="lazy"
         />
@@ -54,7 +54,7 @@ export default function OurStory() {
         <article className="our-story-row">
           <div className="our-story-arched-image">
             <img
-              src="/media/our-story-grandmother.webp"
+              src="/media/our-story-grandmother-upscaled.jpg"
               alt="Chef Saucedo's grandmother preparing dough at her family table"
               loading="lazy"
             />
@@ -88,7 +88,7 @@ export default function OurStory() {
           </div>
           <div className="our-story-arched-image our-story-table-image">
             <img
-              src="/media/our-story-table.webp"
+              src="/media/our-story-table-background-removed.png"
               alt="Silent H dishes and a cocktail arranged on a black-and-white tiled table"
               loading="lazy"
             />
@@ -98,8 +98,8 @@ export default function OurStory() {
         <article className="our-story-row">
           <div className="our-story-arched-image our-story-taco-image">
             <img
-              src="/media/our-story-taco.webp"
-              alt="Golden tacos served over a charcoal grill"
+              src="/media/our-story-dish-cocktail.png"
+              alt="Smoked roasted meat, bone marrow, and a red cocktail against a black background"
               loading="lazy"
             />
           </div>
@@ -122,8 +122,7 @@ export default function OurStory() {
         <div className="our-story-reservation-inner">
           <p className="our-story-reservation-kicker">Your table is waiting</p>
           <h2 id="story-reservation-title">
-            <span>Experience the story</span>
-            <span>of Silent H</span>
+            <span>Experience Silent H</span>
           </h2>
           <p>
             Join us for bold Mexican flavours, handcrafted cocktails, and a night made to be

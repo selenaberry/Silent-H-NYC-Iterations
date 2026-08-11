@@ -912,7 +912,7 @@ h2 {
 .inspiration-showcase::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 56%, rgba(0, 0, 0, 0.18) 72%, rgba(0, 0, 0, 0.72) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.18) 28%, transparent 44%);
   content: "";
 }
 
@@ -926,8 +926,9 @@ h2 {
 .inspiration-showcase h2 {
   position: absolute;
   z-index: 2;
+  top: 110px;
   right: 30px;
-  bottom: 35px;
+  bottom: auto;
   left: 30px;
   margin: 0;
   text-align: center;

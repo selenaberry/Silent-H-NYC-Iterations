@@ -91,15 +91,14 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(page, /story-city-overlay/);
   assert.match(page, /Chef Gerardo Álvarez Saucedo/);
   assert.match(storyPage, /our-story-chef\.webp/);
-  assert.match(storyPage, /our-story-inspiration\.webp/);
-  assert.match(storyPage, /our-story-grandmother\.webp/);
-  assert.match(storyPage, /our-story-table\.webp/);
-  assert.match(storyPage, /our-story-taco\.webp/);
+  assert.match(storyPage, /our-story-inspiration-upscaled\.jpg/);
+  assert.match(storyPage, /our-story-grandmother-upscaled\.jpg/);
+  assert.match(storyPage, /our-story-table-background-removed\.png/);
+  assert.match(storyPage, /our-story-dish-cocktail\.png/);
   assert.match(storyPage, /social-footer-neon\.png/);
   assert.match(storyPage, /className="social-section"/);
   assert.match(storyPage, /our-story-reservation/);
-  assert.match(storyPage, /<span>Experience the story<\/span>/);
-  assert.match(storyPage, /<span>of Silent H<\/span>/);
+  assert.match(storyPage, /<span>Experience Silent H<\/span>/);
   assert.match(storyPage, /Book Your Reservation/);
   assert.match(storyPage, /View the Menu/);
   assert.match(layout, /\/og\.png/);
@@ -122,6 +121,7 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.main-nav\s*\{[^}]*background:\s*rgba\(0,\s*0,\s*0,\s*0\.4\)[^}]*backdrop-filter:\s*blur\(10px\)/s);
   assert.match(css, /\.our-story-hero h1\s*\{[^}]*font-size:\s*clamp\(54px,\s*5\.15vw,\s*66px\)[^}]*line-height:\s*0\.98[^}]*letter-spacing:\s*0\.055em/s);
   assert.match(css, /\.inspiration-showcase\s*\{[^}]*border-radius:\s*0/s);
+  assert.match(css, /\.inspiration-showcase h2\s*\{[^}]*top:\s*110px[^}]*bottom:\s*auto/s);
   assert.match(css, /\.our-story-arched-image\s*\{[^}]*border-radius:\s*0/s);
   assert.match(css, /\.our-story-row-reverse\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s*463px[^}]*gap:\s*46px/s);
   assert.match(css, /\.our-story-table-image\s*\{[^}]*height:\s*617px/s);
@@ -144,10 +144,10 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
     access(new URL("public/media/story-poster-figma.webp", templateRoot)),
     access(new URL("public/media/social-footer-neon.png", templateRoot)),
     access(new URL("public/media/our-story-chef.webp", templateRoot)),
-    access(new URL("public/media/our-story-inspiration.webp", templateRoot)),
-    access(new URL("public/media/our-story-grandmother.webp", templateRoot)),
-    access(new URL("public/media/our-story-table.webp", templateRoot)),
-    access(new URL("public/media/our-story-taco.webp", templateRoot)),
+    access(new URL("public/media/our-story-inspiration-upscaled.jpg", templateRoot)),
+    access(new URL("public/media/our-story-grandmother-upscaled.jpg", templateRoot)),
+    access(new URL("public/media/our-story-table-background-removed.png", templateRoot)),
+    access(new URL("public/media/our-story-dish-cocktail.png", templateRoot)),
     access(new URL("public/og.png", templateRoot)),
   ]);
 });
