@@ -143,7 +143,6 @@ export default function Home() {
                 srcSet="/media/private-dining-sculptures.webp 2400w"
                 sizes="100vw"
                 alt="Silent H private dining room with sculptural columns, murals, and an agave bar"
-                loading="lazy"
               />
             </div>
           </section>
