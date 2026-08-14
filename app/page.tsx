@@ -52,9 +52,10 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <img
             className="hero-image"
-            src="/media/hero-stained-glass-upscaled.jpg"
+            src="/media/hero-mural.webp"
+            srcSet="/media/hero-mural.webp 1920w, /media/hero-mural-2x.webp 3840w"
             sizes="100vw"
-            alt="A full stained-glass mural centred on a luminous golden sun"
+            alt="Silent H dining room with illuminated Mexican murals and sculptural columns"
             fetchPriority="high"
           />
           <div className="hero-vignette" aria-hidden="true" />
@@ -138,8 +139,10 @@ export default function Home() {
             </a>
             <div className="event-image-wrap">
               <img
-                src="/media/private-dining-figma.webp"
-                alt="Silent H private dining room with a large Mexican mural"
+                src="/media/private-dining-sculptures.webp"
+                srcSet="/media/private-dining-sculptures.webp 2400w"
+                sizes="100vw"
+                alt="Silent H private dining room with sculptural columns, murals, and an agave bar"
                 loading="lazy"
               />
             </div>

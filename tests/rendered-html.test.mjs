@@ -77,7 +77,9 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(header, /href="\/#menu"/);
   assert.match(footer, /href="\/our-story"/);
   assert.match(page, /fetchPriority="high"/);
-  assert.match(page, /hero-stained-glass-upscaled\.jpg/);
+  assert.match(page, /hero-mural\.webp/);
+  assert.match(page, /hero-mural-2x\.webp/);
+  assert.match(page, /private-dining-sculptures\.webp/);
   assert.match(page, /story-poster-figma\.webp/);
   assert.match(page, /social-footer-neon\.png/);
   assert.match(page, /FaTiktok/);
@@ -140,8 +142,9 @@ test("homepage source keeps its supplied media and core accessibility hooks", as
   assert.match(css, /\.story-section blockquote\s*\{[^}]*top:\s*29\.77vw[^}]*left:\s*50\.78vw[^}]*width:\s*36\.17vw/s);
 
   await Promise.all([
-    access(new URL("public/media/hero-stained-glass-upscaled.jpg", templateRoot)),
-    access(new URL("public/media/private-dining-figma.webp", templateRoot)),
+    access(new URL("public/media/hero-mural.webp", templateRoot)),
+    access(new URL("public/media/hero-mural-2x.webp", templateRoot)),
+    access(new URL("public/media/private-dining-sculptures.webp", templateRoot)),
     access(new URL("public/media/story-poster-figma.webp", templateRoot)),
     access(new URL("public/media/social-footer-neon.png", templateRoot)),
     access(new URL("public/media/our-story-chef.webp", templateRoot)),
